@@ -9,9 +9,6 @@ angular.module('starter.controllers', [])
     method: 'GET',
     url: baseUrl + 'menu'
   }).then(function successCallback(response) {
-
-    console.log(response);
-
     $scope.types = response.data;
   });
 
