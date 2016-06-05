@@ -6,9 +6,9 @@
 
     <div class="padding contactlist">
       <ion-list>
-        <ion-item><i class="icon ion-ios-home"></i> {{info.street}}, {{info.zip}} </ion-item>
-        <ion-item><a href="#"><i class="icon ion-ios-email"></i> {{info.email}}</a></ion-item>
-        <ion-item><a href="#"><i class="icon ion-ios-telephone"></i> {{info.phone}}</a></ion-item>
+        <ion-item><div class="button button-block" style="margin-top: 0; margin-bottom:5px;"><i class="icon ion-ios-home"></i> {{info.street}}, {{info.zip}} </div></ion-item>
+        <ion-item><a href="mailto:{{info.email}}" class="button button-block" style="margin-top: 0; margin-bottom:5px;"><i class="icon ion-ios-email"></i> {{info.email}}</a></ion-item>
+        <ion-item><a href="tel:{{info.phone}}" class="button button-block" style="margin-top: 0; margin-bottom:5px;"><i class="icon ion-ios-telephone"></i> {{info.phone}}</a></ion-item>
         <!--<ion-item><i class="icon ion-ios-checkmark"></i> CVR her</ion-item>-->
       </ion-list>
     </div>

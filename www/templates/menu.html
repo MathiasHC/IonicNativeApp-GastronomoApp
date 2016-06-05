@@ -2,8 +2,12 @@
   <ion-content class="padding-vertical menu-page">
     <h2 class="title title-center padding-vertical">Menukort</h2>
 
-    <div class="padding" style="">
+    <div class="padding-horizontal padding-top">
+      <p>For at placere en bestilling, skal du ringe til nummeret nedenfor eller trykke på indkøbskurven i øverste højre hjørne.</p>
+      <a href="tel:{{info.phone}}" class="button button-block" style="margin-top: 0; margin-bottom:5px;"><i class="icon ion-ios-telephone"></i> {{info.phone}}</a>
+    </div>
 
+    <div class="padding" style="">
       <ion-list>
         <div ng-repeat="(key, type) in types">
         <ion-item class="item-stable"
