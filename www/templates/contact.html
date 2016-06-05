@@ -14,8 +14,7 @@
     </div>
 
     <div class="bar bar-error bar-assertive" ng-if="error"><p>{{error}}</p></div>
-    <div class="bar bar-error bar-positive" ng-if="error"><p>{{error}}</p></div>
-    <div class="bar bar-error bar-energized" ng-if="error"><p>{{error}}</p></div>
+    <div class="bar bar-error bar-positive" ng-if="msg"><p>{{msg}}</p></div>
 
     <form action="" ng-submit="sendMail()">
       <div class="list">
