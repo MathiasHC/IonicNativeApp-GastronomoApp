@@ -1,6 +1,6 @@
 {
   "name": "gastronomo",
-  "app_id": "",
+  "app_id": "05dad18d",
   "gulpStartupTasks": [
     "sass",
     "watch"
