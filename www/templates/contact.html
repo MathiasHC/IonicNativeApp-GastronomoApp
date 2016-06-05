@@ -4,7 +4,7 @@
 
     <div ng-bind-html="body" class="padding"></div>
 
-    <div class="padding contactlist">
+    <div class="padding contactlist" ng-if="info.email">
       <ion-list>
         <ion-item><div class="button button-block" style="margin-top: 0; margin-bottom:5px;"><i class="icon ion-ios-home"></i> {{info.street}}, {{info.zip}} </div></ion-item>
         <ion-item><a href="mailto:{{info.email}}" class="button button-block" style="margin-top: 0; margin-bottom:5px;"><i class="icon ion-ios-email"></i> {{info.email}}</a></ion-item>
