@@ -9859,6 +9859,11 @@ h2.title {
     margin: 0;
     height: auto; }
 
+.order-btn {
+  position: absolute;
+  top: 4px;
+  right: 0; }
+
 /*
  * http://docs.angularjs.org/api/ng/directive/ngShow#usage_animations
  */
