@@ -57,9 +57,10 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('ContactCtrl', function($scope, $http) {
+.controller('ContactCtrl', function($scope, $http, $httpParamSerializerJQLike) {
 
   $scope.contact = {};
+  $scope.success = "";
 
   $http({
     method: 'GET',
@@ -80,12 +81,16 @@ angular.module('starter.controllers', [])
     $http({
       method: 'POST',
       url: baseUrl + "sendemail",
-      data: $scope.contact,
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
-      }}).then(function(result, status) {
-      console.log(result);
-      console.log(status);
+      },
+      data: $httpParamSerializerJQLike($scope.contact)
+    }).then(function(result, status) {
+
+      if (result.data = true) {
+        $scope.success = "Din besked er nu sendt og vi vil vende tilbage hurtigst muligt."
+      }
+
     }, function(error) {
       console.log(error);
     });
