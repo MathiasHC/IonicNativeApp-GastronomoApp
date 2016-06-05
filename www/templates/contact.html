@@ -3,7 +3,7 @@
     <h2 class="title title-center padding">{{title}}</h2>
 
     <div ng-bind-html="body" class="padding"></div>
-    <div class="bar bar-error bar-assertive"><p><strong>Error! </strong>Fejlbesked her..</p></div>
+    <div class="bar bar-error bar-assertive" ng-if="error"><p>{{error}}</p></div>
     <form action="" ng-submit="sendMail()">
       <div class="list">
         <label class="item item-input item-stacked-label">

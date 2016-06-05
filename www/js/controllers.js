@@ -73,7 +73,7 @@ angular.module('starter.controllers', [])
 
   $scope.sendMail = function() {
 
-    if ($scope.contact.name == "" || $scope.contact.mail == "" || $scope.contact.msg == "") {
+    if (!$scope.contact.name || !$scope.contact.mail || !$scope.contact.msg) {
       $scope.error = "Alle felter skal udfyldes";
       return;
     }
@@ -88,11 +88,11 @@ angular.module('starter.controllers', [])
     }).then(function(result, status) {
 
       if (result.data = true) {
-        $scope.success = "Din besked er nu sendt og vi vil vende tilbage hurtigst muligt."
+        $scope.msg = "Din besked er nu sendt og vi vil vende tilbage hurtigst muligt."
       }
 
     }, function(error) {
-      console.log(error);
+      $scope.error = "Din besked kunne ikke sendes. Prøv venligst igen";
     });
 
   }
