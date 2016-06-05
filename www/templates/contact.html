@@ -1,16 +1,15 @@
 <ion-view view-title="Kontakt">
   <ion-content class="padding-vertical">
-    <h2 class="title title-center padding">Kontakt</h2>
+    <h2 class="title title-center padding">{{title}}</h2>
+
+    <div ng-bind-html="body"></div>
+    <br>
 
     <form action="">
       <div class="list">
         <label class="item item-input item-stacked-label">
           <span class="input-label">Fulde Navn</span>
           <input type="text" placeholder="John Doe">
-        </label>
-        <label class="item item-input item-stacked-label">
-          <span class="input-label">Telefonnr.</span>
-          <input type="text" placeholder="22 33 44 55">
         </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label">E-mail</span>

@@ -41,6 +41,14 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('ContactCtrl', function($scope) {
+.controller('ContactCtrl', function($scope, $http) {
 
-})
+  $http({
+    method: 'GET',
+    url: baseUrl + 'contact'
+  }).then(function successCallback(response) {
+    $scope.title = response.data.post_title;
+    $scope.body = response.data.post_content;
+  });
+
+});
