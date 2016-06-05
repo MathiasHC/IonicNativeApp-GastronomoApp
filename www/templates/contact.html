@@ -4,6 +4,8 @@
 
     <div ng-bind-html="body" class="padding"></div>
     <div class="bar bar-error bar-assertive" ng-if="error"><p>{{error}}</p></div>
+    <div class="bar bar-error bar-positive" ng-if="error"><p>{{error}}</p></div>
+    <div class="bar bar-error bar-energized" ng-if="error"><p>{{error}}</p></div>
     <form action="" ng-submit="sendMail()">
       <div class="list">
         <label class="item item-input item-stacked-label">
