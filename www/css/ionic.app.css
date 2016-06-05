@@ -9833,9 +9833,7 @@ h2.title {
 .row.itemwrap {
   padding: 5px;
   border: 1px solid #ebeaea;
-  border-bottom: 2px solid #ebeaea;
-  margin-top: 2px;
-  margin-bottom: 10px; }
+  border-bottom: 2px solid #ebeaea; }
   .row.itemwrap .img-responsive {
     display: block;
     width: 95%; }
@@ -9853,3 +9851,58 @@ h2.title {
     .row.itemwrap p .readmore {
       text-decoration: none;
       font-weight: bold; }
+  .row.itemwrap .star {
+    position: absolute;
+    top: 5px;
+    left: 15px; }
+
+/*
+ * http://docs.angularjs.org/api/ng/directive/ngShow#usage_animations
+ */
+.item, .item h1, .item h2, .item h3, .item h4, .item h5, .item h6, .item p, .item-content, .item-content h1,
+.item-content h2, .item-content h3, .item-content h4, .item-content h5, .item-content h6, .item-content p {
+  white-space: normal;
+  overflow: auto;
+  text-overflow: clip; }
+
+.item h5 {
+  font-size: .8em; }
+
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+  border-bottom: none;
+  border-top: none;
+  padding: 5px; }
+  .list .item.item-accordion p {
+    line-height: 1.2em; }
+    .list .item.item-accordion p.iteminfo {
+      width: 100%;
+      height: 110px; }
+  .list .item.item-accordion .star {
+    color: #e9e9e9; }
+    .list .item.item-accordion .star.active {
+      color: #f1c40f; }
+
+.list .item.item-accordion.ng-hide {
+  line-height: 0px; }
+
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important; }
+
+.item.item-stable {
+  background-color: #fefefe;
+  border: 1px solid #ebeaea;
+  margin-top: 8px; }
+  .item.item-stable .ion-fork {
+    margin-right: 2px; }
+
+.item.active.item-stable, .item.activated.item-stable, .item-complex.active .item-content.item-stable,
+.item-complex.activated .item-content.item-stable, .item .item-content.active.item-stable,
+.item .item-content.activated.item-stable {
+  background-color: #33cd5f;
+  border: 1px solid #28a54c;
+  color: #fefefe; }
