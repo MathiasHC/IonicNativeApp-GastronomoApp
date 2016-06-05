@@ -9840,14 +9840,7 @@ h2.title {
   .row.itemwrap h5 {
     margin-top: 5px; }
   .row.itemwrap p {
-    font-size: 12px; }
-    .row.itemwrap p .price {
-      padding: 5px;
-      background-color: #efefef;
-      border: 1px solid #cccccc;
-      border-radius: 3px;
-      font-size: 15px;
-      float: right; }
+    font-size: 13px; }
     .row.itemwrap p .readmore {
       text-decoration: none;
       font-weight: bold; }
@@ -9879,8 +9872,7 @@ h2.title {
   .list .item.item-accordion p {
     line-height: 1.2em; }
     .list .item.item-accordion p.iteminfo {
-      width: 100%;
-      height: 110px; }
+      margin-bottom: 10px; }
   .list .item.item-accordion .star {
     color: #e9e9e9; }
     .list .item.item-accordion .star.active {
