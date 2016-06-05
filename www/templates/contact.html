@@ -9,19 +9,19 @@
       <div class="list">
         <label class="item item-input item-stacked-label">
           <span class="input-label">Fulde Navn</span>
-          <input type="text" placeholder="John Doe">
+          <input type="text" ng-model="contactname" placeholder="John Doe">
         </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label">E-mail</span>
-          <input type="text" placeholder="john@doe.com">
+          <input type="text" ng-model="contactmail" placeholder="john@doe.com">
         </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label">Besked</span>
-          <textarea placeholder="Besked" style="resize: vertical;"></textarea>
+          <textarea placeholder="Besked" ng-model="contactmsg"  style="resize: vertical;"></textarea>
         </label>
       </div>
       <div class="padding">
-        <button class="button button-block button-balanced"><i class="icon ion-ios-paperplane"></i> Send Besked</button>
+        <button ng-submit="sendMail()" class="button button-block button-balanced"><i class="icon ion-ios-paperplane"></i> Send Besked</button>
       </div>
     </form>
 

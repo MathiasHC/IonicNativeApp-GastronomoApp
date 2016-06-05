@@ -43,6 +43,10 @@ angular.module('starter.controllers', [])
 
 .controller('ContactCtrl', function($scope, $http) {
 
+  $scope.contactname = '';
+  $scope.contactmail = '';
+  $scope.contactmsg = '';
+
   $http({
     method: 'GET',
     url: baseUrl + 'contact'
@@ -50,5 +54,15 @@ angular.module('starter.controllers', [])
     $scope.title = response.data.post_title;
     $scope.body = response.data.post_content;
   });
+
+
+  $scope.sendMail = function() {
+
+
+    console.log($scope.contactname)
+    console.log($scope.contactmail)
+    console.log($scope.contactmsg)
+
+  }
 
 });
