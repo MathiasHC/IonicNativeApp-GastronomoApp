@@ -47,8 +47,6 @@ h2.title {
     padding:5px;
     border: 1px solid #ebeaea;
     border-bottom: 2px solid #ebeaea;
-    margin-top: 2px;
-    margin-bottom: 10px;
     .img-responsive {
       display: block;
       width:95%;
@@ -71,6 +69,11 @@ h2.title {
         font-weight: bold;
       }
     }
+    .star {
+      position: absolute;
+      bottom: 5px;
+      right: 15px;
+    }
   }
 }
 
@@ -82,6 +85,17 @@ h2.title {
   padding-top: 0;
   padding-bottom: 0;
   transition: 0.09s all linear;
+
+  border-bottom: none;
+  border-top: none;
+  padding: 5px;
+
+  .star {
+    color: #e9e9e9;
+    &.active {
+      color: #f1c40f;
+    }
+  }
 }
 .list .item.item-accordion.ng-hide {
   line-height: 0px;
@@ -89,4 +103,21 @@ h2.title {
 .list .item.item-accordion.ng-hide-add,
 .list .item.item-accordion.ng-hide-remove {
   display: block !important;
+}
+
+.item.item-stable {
+  background-color: #fefefe;
+  border: 1px solid #ebeaea;
+  margin-top: 8px;
+  .ion-fork {
+    margin-right: 2px;
+  }
+}
+.item.active.item-stable, .item.activated.item-stable, .item-complex.active .item-content.item-stable,
+.item-complex.activated .item-content.item-stable, .item .item-content.active.item-stable,
+.item .item-content.activated.item-stable {
+  background-color: #33cd5f;
+  border: 1px solid #28a54c;
+  color: #fefefe;
+
 }
