@@ -16,9 +16,12 @@ angular.module('starter.controllers', [])
     $scope.link = response.data.link;
     $scope.feed = [];
 
+    var count = 0;
+
     response.data.posts.forEach(function(entry) {
-      if (entry.message) {
+      if (count < 3 && entry.message) {
         $scope.feed.push(entry);
+        count++;
       }
     });
   });
