@@ -3,9 +3,20 @@
     <h2 class="title title-center padding">{{title}}</h2>
 
     <div ng-bind-html="body" class="padding"></div>
+
+    <div class="padding contactlist">
+      <ion-list>
+        <ion-item><i class="icon ion-ios-home"></i> Adresse her</ion-item>
+        <ion-item><a href="#"><i class="icon ion-ios-email"></i> E-mail her</a></ion-item>
+        <ion-item><a href="#"><i class="icon ion-ios-telephone"></i> Telefonnr. her</a></ion-item>
+        <ion-item><i class="icon ion-ios-checkmark"></i> CVR her</ion-item>
+      </ion-list>
+    </div>
+
     <div class="bar bar-error bar-assertive" ng-if="error"><p>{{error}}</p></div>
     <div class="bar bar-error bar-positive" ng-if="error"><p>{{error}}</p></div>
     <div class="bar bar-error bar-energized" ng-if="error"><p>{{error}}</p></div>
+
     <form action="" ng-submit="sendMail()">
       <div class="list">
         <label class="item item-input item-stacked-label">

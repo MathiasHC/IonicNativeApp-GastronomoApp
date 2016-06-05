@@ -142,3 +142,18 @@ h2.title {
   color: #fefefe;
 
 }
+
+.contactlist {
+  margin-bottom: 15px;
+  .item {
+    padding: 4px 5px;
+    border: none;
+    color: #444;
+    a, a:visited, a:hover, a:active, a:focus {
+      color: #444;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+}

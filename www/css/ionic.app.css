@@ -9906,3 +9906,14 @@ h2.title {
   background-color: #33cd5f;
   border: 1px solid #28a54c;
   color: #fefefe; }
+
+.contactlist {
+  margin-bottom: 15px; }
+  .contactlist .item {
+    padding: 4px 5px;
+    border: none;
+    color: #444; }
+    .contactlist .item a, .contactlist .item a:visited, .contactlist .item a:hover, .contactlist .item a:active, .contactlist .item a:focus {
+      color: #444; }
+    .contactlist .item a {
+      text-decoration: none; }
