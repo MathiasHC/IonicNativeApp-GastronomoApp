@@ -6,22 +6,27 @@ navigation history that also transitions its views in and out.
 <ion-tabs class="tabs-bottom tabs-icon-top tabs-dark tabs-color-active-balanced tabs-color-light">
   <div class="tabs-bottom tabs-icon-top tabs-dark tabs-color-active-balanced tabs-color-light">
     <!-- Home Tab -->
-    <ion-tab title="Menukort" icon="ion-fork" href="#/tab/home">
+    <ion-tab title="Forside" icon="ion-home" href="#/tab/home">
       <ion-nav-view name="tab-home"></ion-nav-view>
     </ion-tab>
 
+    <!-- Menu Tab -->
+    <ion-tab title="Menu" icon="ion-fork" href="#/tab/menu">
+      <ion-nav-view name="tab-menu"></ion-nav-view>
+    </ion-tab>
+
     <!-- Order Online Tab -->
-    <ion-tab title="Order Online" icon="ion-ios-plus" onclick="window.open('http://mathiasholmbo.dk', '_blank')">
+    <ion-tab title="Order Online" icon="ion-ios-cart" onclick="window.open('http://mathiasholmbo.dk', '_blank')">
       <ion-nav-view name="tab-order-online"></ion-nav-view>
     </ion-tab>
 
     <!-- About Tab -->
-    <ion-tab title="Om Gastrnomo" icon="ion-ios-information" href="#/tab/about">
+    <ion-tab title="Om Os" icon="ion-ios-information" href="#/tab/about">
       <ion-nav-view name="tab-about"></ion-nav-view>
     </ion-tab>
 
     <!-- Contact Tab -->
-    <ion-tab title="Contact" icon="ion-ios-email" href="#/tab/contact">
+    <ion-tab title="Kontact" icon="ion-ios-email" href="#/tab/contact">
       <ion-nav-view name="tab-contact"></ion-nav-view>
     </ion-tab>
   </div>

@@ -47,7 +47,16 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
     views: {
       'tab-home': {
         templateUrl: 'templates/home.html',
-        controller: 'HomeCtrl'
+        controller: 'IndexCtrl'
+      }
+    }
+  })
+  .state('tab.menu', {
+    url: '/menu',
+    views: {
+      'tab-menu': {
+        templateUrl: 'templates/menu.html',
+        controller: 'MenuCtrl'
       }
     }
   })

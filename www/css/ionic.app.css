@@ -9834,9 +9834,11 @@ h2.title {
   padding: 5px;
   border: 1px solid #ebeaea;
   border-bottom: 2px solid #ebeaea; }
+  .row.itemwrap.facebook {
+    margin-bottom: 10px; }
   .row.itemwrap .img-responsive {
     display: block;
-    width: 95%; }
+    width: 100%; }
   .row.itemwrap h5 {
     margin-top: 5px; }
   .row.itemwrap p {

@@ -1,56 +1,39 @@
-<ion-view view-title="Menukort">
-  <ion-content class="padding-vertical menu-page">
-    <h2 class="title title-center padding-vertical">Menukort</h2>
+<ion-view view-title="Om Gastronomo">
+  <ion-content class="padding-vertical">
+    <h2 class="title title-center padding">{{title}}</h2>
 
-    <div class="padding" style="">
+    <img src="img/LOGO_DARK.jpg" alt="Gastronomo Logo" style="width: 100%; margin: 0 auto;" />
 
-      <ion-list>
-        <div ng-repeat="(key, type) in types">
-        <ion-item class="item-stable"
-                  ng-click="toggleGroup(key)"
-                  ng-class="{active: isGroupShown(key)}">
-          <i class="icon" ng-class="isGroupShown(key) ? 'ion-ios-arrow-down' : 'ion-ios-arrow-forward'"></i>
-          {{key | capitalize}}
-          <i class="icon" ng-class="isGroupShown(key) ? 'ion-fork' : ''"></i><i class="icon" ng-class="isGroupShown(key) ? 'ion-knife' : ''"></i>
-        </ion-item>
-          <ion-item class="item-accordion"
-                    ng-repeat="item in type"
-                    ng-show="isGroupShown(key)">
-            <div class="row itemwrap">
-              <div class="col-50">
-                <img ng-src="{{item.thumb}}" alt="placeholder" class="img-responsive">
-              </div>
-              <div class="col-50">
-                <h5>{{item.title}}</h5>
-                <p class="iteminfo">{{item.body}}</p>
-                <p ng-bind-html="item.price" class="price"></p>
-                <div class="star">
-                  <i class="icon ion-star"></i>
-                </div>
-              </div>
-            </div>
-          </ion-item>
-        </div>
-      </ion-list>
-
-      <!-- Old Repeater - non-accordion -->
-    <!--<div ng-repeat="(key, type) in types">-->
-
-        <!--<h2>{{key | capitalize}}</h2>-->
-
-        <!--<div class="row itemwrap" ng-repeat="item in type">-->
-            <!--<div class="col-50">-->
-                <!--<img ng-src="{{item.thumb}}" alt="placeholder" class="img-responsive">-->
-            <!--</div>-->
-            <!--<div class="col-50">-->
-                <!--<h5>{{item.title}}</h5>-->
-                <!--<p>{{item.body}}</p>-->
-                <!--<p ng-bind-html="item.price"></p>-->
-            <!--</div>-->
-        <!--</div>-->
-
-    <!--</div>-->
-
+    <div class="row">
+      <div class="col">
+        <a class="button button-block icon-left ion-fork button-balanced" href="#/tab/menu">
+          Se Menukort
+        </a>
+      </div>
+      <div class="col">
+        <a class="button button-block icon-left ion-ios-cart button-energized" onclick="window.open('http://mathiasholmbo.dk', '_blank')">
+          Bestil Mad
+        </a>
+      </div>
     </div>
+
+    <div ng-bind-html="body"></div>
+    <br>
+
+    <div class="padding">
+      <h4 class="title title-left">Nyheder</h4>
+      <div class="row itemwrap facebook" ng-repeat="post in feed">
+        <div class="col-25">
+          <img ng-src="{{picture}}" alt="placeholder" class="img-responsive">
+        </div>
+        <div class="col-75 padding-horizontal">
+          <p>
+            {{post.message}}
+          </p>
+          <p><a ng-href="{{link}}" class="readmore balanced">Læs Mere <i class="icon ion-ios-arrow-forward"></i><i class="icon ion-ios-arrow-forward"></i></a></p>
+        </div>
+      </div>
+    </div>
+
   </ion-content>
 </ion-view>

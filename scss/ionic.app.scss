@@ -47,9 +47,12 @@ h2.title {
     padding:5px;
     border: 1px solid #ebeaea;
     border-bottom: 2px solid #ebeaea;
+    &.facebook {
+      margin-bottom:10px;
+    }
     .img-responsive {
       display: block;
-      width:95%;
+      width:100%;
     }
     h5 {
       margin-top: 5px;
@@ -78,6 +81,17 @@ h2.title {
     height: auto;
   }
 }
+
+//.button-order {
+//  background-color: #f39c12;
+//  border:1px solid darken(#f39c12, 3%);
+//  color: #fefefe;
+//  &:hover, &:focus, &:active, &:visited {
+//    color: #fefefe;
+//    background-color: darken(#f39c12, 5%);
+//    border:1px solid darken(#f39c12, 8%);
+//  }
+//}
 
 /*
  * http://docs.angularjs.org/api/ng/directive/ngShow#usage_animations
