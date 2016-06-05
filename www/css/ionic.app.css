@@ -9822,6 +9822,8 @@ ion-tabs.tabs-color-active-balanced .tab-item {
   font-variant: small-caps; }
   .title.title-center {
     text-align: center !important; }
+  .title a, .title a:visited, .title a:focus, .title a:active, .title a:hover {
+    text-decoration: none; }
 
 h2.title {
   border-bottom: 1px solid #ececec;
