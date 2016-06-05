@@ -5,6 +5,22 @@ angular.module('starter.controllers', [])
 
 .controller('HomeCtrl', function($scope, $http) {
 
+  /* ACCORDION LOGIC
+   * if given group is the selected group, deselect it
+   * else, select the given group
+   */
+  $scope.toggleGroup = function(group) {
+    if ($scope.isGroupShown(group)) {
+      $scope.shownGroup = null;
+    } else {
+      $scope.shownGroup = group;
+    }
+  };
+  
+  $scope.isGroupShown = function(group) {
+    return $scope.shownGroup === group;
+  };
+
   $http({
     method: 'GET',
     url: baseUrl + 'menu'
@@ -43,9 +59,7 @@ angular.module('starter.controllers', [])
 
 .controller('ContactCtrl', function($scope, $http) {
 
-  $scope.contactname = '';
-  $scope.contactmail = '';
-  $scope.contactmsg = '';
+  $scope.contact = {};
 
   $http({
     method: 'GET',
@@ -58,10 +72,23 @@ angular.module('starter.controllers', [])
 
   $scope.sendMail = function() {
 
+    if ($scope.contact.name == "" || $scope.contact.mail == "" || $scope.contact.msg == "") {
+      $scope.error = "Alle felter skal udfyldes";
+      return;
+    }
 
-    console.log($scope.contactname)
-    console.log($scope.contactmail)
-    console.log($scope.contactmsg)
+    $http({
+      method: 'POST',
+      url: baseUrl + "sendemail",
+      data: $scope.contact,
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }}).then(function(result, status) {
+      console.log(result);
+      console.log(status);
+    }, function(error) {
+      console.log(error);
+    });
 
   }
 
