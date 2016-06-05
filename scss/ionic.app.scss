@@ -69,6 +69,16 @@ h2.title {
   }
 }
 
+.bar-error {
+  margin: 20px 0 0;
+  position: relative;
+  height: auto;
+  p {
+    margin:0;
+    height: auto;
+  }
+}
+
 /*
  * http://docs.angularjs.org/api/ng/directive/ngShow#usage_animations
  */

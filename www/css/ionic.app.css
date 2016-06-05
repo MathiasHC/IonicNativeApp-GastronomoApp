@@ -9849,6 +9849,14 @@ h2.title {
     top: 5px;
     left: 15px; }
 
+.bar-error {
+  margin: 20px 0 0;
+  position: relative;
+  height: auto; }
+  .bar-error p {
+    margin: 0;
+    height: auto; }
+
 /*
  * http://docs.angularjs.org/api/ng/directive/ngShow#usage_animations
  */
