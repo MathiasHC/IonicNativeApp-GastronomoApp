@@ -23,9 +23,11 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 
 // Custom CSS
-//.view-container.tab-content {
-//  margin-top: 44px;
-//}
+
+ion-tabs.tabs-color-active-balanced .tab-item {
+  color: #9e9e9e;
+}
+
 .title {
   font-variant: small-caps;
   &.title-center {

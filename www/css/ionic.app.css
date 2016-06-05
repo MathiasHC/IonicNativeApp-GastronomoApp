@@ -9815,6 +9815,9 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+ion-tabs.tabs-color-active-balanced .tab-item {
+  color: #9e9e9e; }
+
 .title {
   font-variant: small-caps; }
   .title.title-center {
