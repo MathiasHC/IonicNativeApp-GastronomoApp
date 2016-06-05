@@ -36,6 +36,13 @@ angular.module('starter.controllers', [])
     $scope.types = response.data;
   });
 
+  $http({
+    method: 'GET',
+    url: baseUrl + 'contactinfo'
+  }).then(function successCallback(response) {
+    $scope.info = response.data;
+  });
+
   /* ACCORDION LOGIC
    * if given group is the selected group, deselect it
    * else, select the given group
