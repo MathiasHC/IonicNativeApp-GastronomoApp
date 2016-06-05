@@ -61,21 +61,6 @@ angular.module('starter.controllers', [])
     $scope.body = response.data.post_content;
   });
 
-  //$http({
-  //  method: 'GET',
-  //  url: baseUrl + 'facebook'
-  //}).then(function successCallback(response) {
-  //  $scope.picture = response.data.picture;
-  //  $scope.link = response.data.link;
-  //  $scope.feed = [];
-  //
-  //  response.data.posts.forEach(function(entry) {
-  //    if (entry.message) {
-  //      $scope.feed.push(entry);
-  //    }
-  //  });
-  //});
-
 })
 
 .controller('ContactCtrl', function($scope, $http, $httpParamSerializerJQLike) {
@@ -91,6 +76,12 @@ angular.module('starter.controllers', [])
     $scope.body = response.data.post_content;
   });
 
+  $http({
+    method: 'GET',
+    url: baseUrl + 'contactinfo'
+  }).then(function successCallback(response) {
+    $scope.info = response.data;
+  });
 
   $scope.sendMail = function() {
 
